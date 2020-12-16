@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Latihan19</string>
+    <string name="textView_Judul">Restoran Ramen Padang</string>
+    <string name="textView_Makanan">Pilih Menu Makanan</string>
+    <string-array name="makanan">
+        <item>Shoyu Ramen Ayam Pop</item>
+        <item>Miso Ramen Kuah Rendang</item>
+        <item>Shio Ramen Gulai Nangka</item>
+    </string-array>
+</resources>

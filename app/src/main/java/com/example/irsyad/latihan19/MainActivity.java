@@ -22,14 +22,10 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<CharSequence> arrayAdapter;
     RatingBar Rtb;
     Button B_Submit;
-    TextView txtLevel;
-    TextView txtHarga;
-    Spinner Sp_Makanan;
-    Spinner SP_Minuman;
-    ArrayList<String> arrayList_Type;
-    ArrayAdapter<String> arrayAdapter_Type;
-    ArrayList<String> arrayList_Minuman;
-    ArrayAdapter<String> arrayAdapter_Minuman;
+    TextView txtLevel, txtHarga;
+    Spinner Sp_Makanan, SP_Minuman;
+    ArrayList<String> arrayList_Type, arrayList_Minuman;
+    ArrayAdapter<String> arrayAdapter_Type, arrayAdapter_Minuman;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,12 +70,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Inisial(){
-        Sp_Makanan = (Spinner) findViewById(R.id.spinner_Makanan);
-        SP_Minuman = (Spinner) findViewById(R.id.spinner_Minuman);
-        Rtb = (RatingBar) findViewById(R.id.ratingBar_Rate);
-        B_Submit = (Button) findViewById(R.id.button_Submit);
-        txtLevel = (TextView) findViewById(R.id.textView_Level);
-        txtHarga = (TextView) findViewById(R.id.textView_Harga);
+        Sp_Makanan = findViewById(R.id.spinner_Makanan);
+        SP_Minuman = findViewById(R.id.spinner_Minuman);
+        Rtb = findViewById(R.id.ratingBar_Rate);
+        B_Submit = findViewById(R.id.button_Submit);
+        txtLevel = findViewById(R.id.textView_Level);
+        txtHarga = findViewById(R.id.textView_Harga);
     }
 
     private void Atur_Spinner_Minuman() {
@@ -94,12 +90,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Atur_Spinner_Makanan(){
-        /*
-        arrayAdapter = ArrayAdapter.createFromResource
-                (this,R.array.makanan,android.R.layout.simple_spinner_item);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        Sp_Makanan.setAdapter(arrayAdapter);
-        */
         arrayList_Type = new ArrayList<>();
         arrayList_Type.clear();
         arrayList_Type.add("Shoyu Ramen Ayam Pop");

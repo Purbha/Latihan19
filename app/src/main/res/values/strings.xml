@@ -2,6 +2,13 @@
     <string name="app_name">Latihan19</string>
     <string name="textView_Judul">Restoran Ramen Padang</string>
     <string name="textView_Makanan">Pilih Menu Makanan</string>
+    <string name="textView_Minuman">Pilih Menu Minuman</string>
+    <string name="textView_Pedes">Level Pedas</string>
+    <string name="button_Submit">Submit</string>
+    <string name="textView_Harga">Harga Makanan:</string>
+    <string name="textView_Pedes1">Level Pedas:</string>
+    <string name="imageView_Spinner_Logo">Spinner Logo</string>
+    <string name="dummy_Teks">XXXXXXXXXXXXXXXXXXXX</string>
     <string-array name="makanan">
         <item>Shoyu Ramen Ayam Pop</item>
         <item>Miso Ramen Kuah Rendang</item>

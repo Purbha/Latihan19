@@ -14,4 +14,7 @@
         <item>Miso Ramen Kuah Rendang</item>
         <item>Shio Ramen Gulai Nangka</item>
     </string-array>
+    <string name="spinner_Makanan">Spinner Makanan</string>
+    <string name="spinner_Minuman">Spinner Minuman</string>
+    <string name="ratingBar_Rate">Rating Bar</string>
 </resources>

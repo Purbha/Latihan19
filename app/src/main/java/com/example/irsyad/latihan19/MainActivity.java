@@ -3,16 +3,16 @@ package com.example.irsyad.latihan19;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -101,21 +101,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Listen_B_Submit(){
-        B_Submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String Nama_Makanan = Sp_Makanan.getSelectedItem().toString();
-                String Nama_Minuman = SP_Minuman.getSelectedItem().toString();
-                double Rating =  Rtb.getRating();
-                int Pedas = Harga_Pedas(Rating);
-                int Makanan = Harga_Makanan(Nama_Makanan);
-                int Minuman = Harga_Minuman(Nama_Minuman);
-                int Harga_Total = Pedas + Makanan + Minuman;
-                String Ket = Level_Pedas(Rating);
-                txtLevel.setText("Level Pedas: " + Ket);
-                txtHarga.setText("Harga Makanan: " + String.format("%,d",Harga_Total));
-                Toast.makeText(getBaseContext(), "Successful", Toast.LENGTH_SHORT).show();
-            }
+        B_Submit.setOnClickListener(v -> {
+            String Nama_Makanan = Sp_Makanan.getSelectedItem().toString();
+            String Nama_Minuman = SP_Minuman.getSelectedItem().toString();
+            double Rating =  Rtb.getRating();
+            int Pedas = Harga_Pedas(Rating);
+            int Makanan = Harga_Makanan(Nama_Makanan);
+            int Minuman = Harga_Minuman(Nama_Minuman);
+            int Harga_Total = Pedas + Makanan + Minuman;
+            String Ket = Level_Pedas(Rating);
+            txtLevel.setText("Level Pedas: " + Ket);
+            txtHarga.setText("Harga Makanan: " + String.format("%,d",Harga_Total));
+            Toast.makeText(getBaseContext(), "Successful", Toast.LENGTH_SHORT).show();
         });
     }
 

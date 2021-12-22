@@ -8,10 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="textView_Style1" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">@color/FireBrick</item>
+        <item name="android:textColor">@color/DarkSlateBlue</item>
         <item name="android:textSize">12sp</item>
-        <item name="android:textStyle">bold|normal</item>
-        <item name="android:fontFamily">casual</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
     <style name="textView_Style2" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/DarkViolet</item>
@@ -21,7 +21,7 @@
     </style>
 
     <style name="textView_Style3" parent="@android:style/TextAppearance.Medium">
-        <item name="android:textColor">@color/Orange</item>
+        <item name="android:textColor">@color/MidnightBlue</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textStyle">bold|normal</item>
         <item name="android:fontFamily">casual</item>
@@ -70,5 +70,8 @@
     <style name="imageView_Style1" parent="@android:style/TextAppearance.Medium">
         <item name="android:layout_width">48dp</item>
         <item name="android:height">48dp</item>
+    </style>
+    <style name="spinner_Style1" parent="@android:style/TextAppearance.Medium">
+        <item name="android:minHeight">48dp</item>
     </style>
 </resources>

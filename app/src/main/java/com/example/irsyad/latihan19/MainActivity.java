@@ -1,7 +1,6 @@
 package com.example.irsyad.latihan19;
 
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -50,18 +49,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder A_Builder = new AlertDialog.Builder(MainActivity.this);
             A_Builder.setMessage("Yakin mau keluar dari sistem?")
                     .setCancelable(false)
-                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
+                    .setPositiveButton("OK", (dialog, which) -> finish())
+                    .setNegativeButton("CANCEL", (dialog, which) -> dialog.cancel());
             AlertDialog Alert = A_Builder.create();
             Alert.setTitle("Confirmation");
             Alert.show();
@@ -84,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         arrayList_Minuman.add("Es Kuah Micin");
         arrayList_Minuman.add("Alpukat Saus Padang");
         arrayList_Minuman.add("Jus Pare");
-        arrayAdapter_Minuman = new ArrayAdapter<String>(this,R.layout.template_minuman,R.id.textView_Spinner_Minuman,arrayList_Minuman);
+        arrayAdapter_Minuman = new ArrayAdapter<>(this,R.layout.template_minuman,R.id.textView_Spinner_Minuman,arrayList_Minuman);
         arrayAdapter_Minuman.notifyDataSetChanged();
         SP_Minuman.setAdapter(arrayAdapter_Minuman);
     }
@@ -95,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
         arrayList_Type.add("Shoyu Ramen Ayam Pop");
         arrayList_Type.add("Miso Ramen Kuah Rendang");
         arrayList_Type.add("Shio Ramen Gulai Nangka");
-        arrayAdapter_Type = new ArrayAdapter<String>(this,R.layout.template_spinner,R.id.textView_Spinner_Header,arrayList_Type);
+        arrayAdapter_Type = new ArrayAdapter<>(this,R.layout.template_spinner,R.id.textView_Spinner_Header,arrayList_Type);
         arrayAdapter_Type.notifyDataSetChanged();
         Sp_Makanan.setAdapter(arrayAdapter_Type);
     }
@@ -117,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int Harga_Makanan(String Nama_Makanan){
-        int Harga = 0;
+        int Harga;
         if(Objects.equals(Nama_Makanan,"Shoyu Ramen Ayam Pop")){
             Harga = 50000;
         } else if(Objects.equals(Nama_Makanan,"Miso Ramen Kuah Rendang")){
@@ -129,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int Harga_Minuman(String Nama_Minuman){
-        int Harga = 0;
+        int Harga;
         if(Objects.equals(Nama_Minuman,"Es Kuah Micin")){
             Harga = 7500;
         } else if(Objects.equals(Nama_Minuman,"Alpukat Saus Padang")){
@@ -141,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private int Harga_Pedas(double Rating){
-        int Harga = 0;
+        int Harga;
         if (Rating > 4) {
             Harga = 10000;
         } else if (Rating > 3) {

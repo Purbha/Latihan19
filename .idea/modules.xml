@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Latihan19.iml" filepath="$PROJECT_DIR$/.idea/modules/Latihan19.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Latihan19.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Latihan19.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Latihan19.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Latihan19.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Latihan19.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Latihan19.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Latihan19.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Latihan19.app.unitTest.iml" />
     </modules>
   </component>
 </project>
